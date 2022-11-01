@@ -1,8 +1,8 @@
 import React from 'react';
 import style from "./style.js";
-import {Navbar,Billing,Business,Button,CardDeal,Clients, CTA,Feedback,getStarted,Hero,Stats,Testimonials,Footer} from './components'
+import {Navbar,Billing,Business,CardDeal,Clients, CTA,Hero,Stats,Testimonials,Footer} from './components'
 
-function App(props) {
+function App() {
     return (
         <div className="bg-primary w-full overflow-hidden">
             <div className={`${style.paddingX} ${style.flexCenter}`}>

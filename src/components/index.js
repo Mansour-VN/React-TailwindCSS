@@ -5,7 +5,7 @@ import Button from "./Button.jsx";
 import CardDeal from "./CardDeal.jsx";
 import Clients from "./Clients.jsx";
 import CTA from "./CTA.jsx";
-import Feedback from "./Feedback.jsx";
+import FeedbackCard from "./FeedbackCard.jsx";
 import getStarted from "./GetStarted.jsx";
 import Hero from "./Hero.jsx";
 import Stats from "./Stats.jsx";
@@ -19,7 +19,7 @@ export {
     CardDeal,
     Clients,
     CTA,
-    Feedback,
+    FeedbackCard,
     getStarted,
     Hero,
     Testimonials,
