@@ -1,30 +1,30 @@
 import React from 'react';
 import styles from "../style.js";
 import {logo} from '../assets';
-import {footerLinks, socialMedia} from '../constant';
+import {footerLinks, socialMedia, FooterContent} from '../constant';
 
 
-function Footer() {
+function Footer({lang}) {
     return (
         <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
             <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
                 <div>
                     <img src={logo} alt="hoobank" className='w-[266px] h-[72px] object-contain'/>
                     <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-                        A new way to make the payments easy, reliable and secure.
+                        {lang? FooterContent[0].content : FooterContent[0].contentfa}
                     </p>
                 </div>
                 <div className='flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10 '>
                     {footerLinks.map((footerLink) => (
                         <div key={footerLink.title} className='flex flex-col ss:my-0 my-4 min-w-[150px]'>
                             <h4 className='font-poppins font-medium text-[18px] leading-[27px] text-white'>
-                                {footerLink.title}
+                                {lang? footerLink.title : footerLink.titlefa}
                             </h4>
                             <ul className='list-none mt-4'>
                                 {footerLink.links.map((link, index) => (
                                     <li key={link.name} className={`font-poppins font-normal text-[16px] leading-[24px]
                                      text-dimWhite hover:text-secondary cursor-pointer ${index !== footerLink.links.length - 1 ? 'mb-4' : 'mb-0'}`}>
-                                        {link.name}
+                                        {lang ? link.name : link.namefa}
                                     </li>
                                 ))}
                             </ul>
@@ -35,7 +35,7 @@ function Footer() {
             </div>
             <div className='w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3f3e45]'>
                 <p className='font-poppins font-normal text-center text-[18px] leading-[27px] text-white'>
-                    2021 Hoobank. All Rights Reserved.
+                    {lang? FooterContent[1].content : FooterContent[1].contentfa}
                 </p>
                 <div className='flex flex-row md:mt-0 mt-6'>
                     {socialMedia.map((social, index)=>(

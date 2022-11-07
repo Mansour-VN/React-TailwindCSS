@@ -1,17 +1,17 @@
 import React from 'react';
-import {card} from '../assets'
+import {card} from '../assets';
 import styles, {layout} from "../style.js";
-import Button from './Button.jsx'
+import Button from './Button.jsx';
+import {CardDealContent} from '../constant';
 
-function CardDeal() {
+function CardDeal({lang}) {
     return (
         <section id='CardDeal' className={layout.section}>
             <div className={layout.sectionInfo}>
                 <h2>Find a better card deal <br className='sm:block hidden'/></h2>
                 in few easy steps.
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                    Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis
-                    aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
+                    {lang? CardDealContent[0].content : CardDealContent[0].contentfa}
                 </p>
                 <Button styles='mt-10'/>
             </div>

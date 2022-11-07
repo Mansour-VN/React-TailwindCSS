@@ -2,7 +2,7 @@ import React from 'react';
 import  {clients} from "../constant/index.js";
 import styles from "../style.js";
 
-function Clients() {
+function Clients({lang}) {
     return (
         <section className={`${styles.flexCenter}`}>
             <div className={`${styles.flexCenter} flex-wrap w-full`}>

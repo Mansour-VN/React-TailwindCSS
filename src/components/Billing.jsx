@@ -1,7 +1,8 @@
 import React from 'react';
 import { apple, bill, google} from '../assets'
 import styles , {layout} from "../style.js";
-function Billing() {
+import {FounderContent} from "../constant"
+function Billing({lang}) {
     return (
         <section id='product' className={layout.sectionReverse}>
             <div className={layout.sectionImgReverse}>
@@ -11,13 +12,10 @@ function Billing() {
             </div>
             <div className={layout.sectionInfo}>
                 <h2 className={styles.heading2}>
-                    Easily control your <br className="sm:block hidden" /> billing &
-                    invoicing
+                    {lang ? 'Easily control your': 'هزینه ها و صورتحسابهای خودرا'} <br className="sm:block hidden" /> {lang ? 'billing & invoicing' : 'به راحت ترین نحو کنترل نمایید'}
                 </h2>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                    Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio
-                    aenean neque. Fusce ipsum orci rhoncus aliporttitor integer platea
-                    placerat.
+                    {lang ? FounderContent[0].content : FounderContent[0].contentfa }
                 </p>
 
                 <div className='flex flex-row flex-wrap sm:mt-6'>

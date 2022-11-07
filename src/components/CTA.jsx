@@ -1,17 +1,22 @@
 import React from 'react';
 import styles from "../style.js";
 import Button from "./Button.jsx";
+import {CtaContent} from '../constant';
 
-function Cta() {
+function Cta({lang}) {
     return (
-        <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}>
+        <section
+            className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}>
             <div className='flex-1 flex flex-col'>
-                <h2 className={styles.heading2}>Let’s try our service now!</h2>
-                <p className={`${styles.paragraph} max-w-[470px] mt-5 `}>Everything you need to accept card payments and grow your business
-                    anywhere on the planet.</p>
+                <h2 className={`${styles.heading2}`}>
+                    {lang ? CtaContent[0].content : CtaContent[0].contentfa}
+                </h2>
+                <p className={`${styles.paragraph}  max-w-[470px] mt-5 `}>
+                    {lang ? CtaContent[1].content : CtaContent[1].contentfa}
+                </p>
             </div>
             <div>
-                <Button />
+                <Button/>
             </div>
         </section>
     );
