@@ -16,7 +16,7 @@ function Cta({lang}) {
                 </p>
             </div>
             <div>
-                <Button/>
+                <Button lang={lang}/>
             </div>
         </section>
     );

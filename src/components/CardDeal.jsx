@@ -13,7 +13,7 @@ function CardDeal({lang}) {
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
                     {lang? CardDealContent[0].content : CardDealContent[0].contentfa}
                 </p>
-                <Button styles='mt-10'/>
+                <Button lang={lang} styles='mt-10'/>
             </div>
             <div className={layout.sectionImg}>
                 <img src={card} alt="card" className='w-[100%] h-[100%]'/>
