@@ -6,18 +6,18 @@ import {Button} from "./index.js";
 
 function Business({lang}) {
     const FeatureCard = ({icon, title, content, titlefa, contentfa, index}) => (
-        <div>
+        <div className='w-100'>
             <div
-                className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1} ? 'mb-6' : 'mb-0'} feature-card`}>
+                className={`flex flex-row w-100 p-6 rounded-[20px] ${index !== features.length - 1} ? 'mb-6' : 'mb-0'} feature-card`}>
                 <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
                     <img src={icon} alt="icon" className='w-[50%] h-[50%] object-contain'/>
                 </div>
             </div>
             <div className='felx flex-1 flex-col ml-3 '>
-                <h4 className='font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1'>
+                <h4 className='font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1 rtl:font-mitra'>
                     {lang ? title : titlefa}
                 </h4>
-                <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[23px] mb-1'>
+                <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[23px] mb-1 rtl:font-mitra'>
                     {lang ? content : contentfa}
                 </p>
             </div>
@@ -33,13 +33,13 @@ function Business({lang}) {
                 <h2 className={`${styles.heading2} ${lang ? 'hidden' : 'block'}`}>
                     شما به کسب و کار خود برسید, <br className="sm:block hidden"/> تراکنش هارا به ما بسپارید
                 </h2>
-                <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+                <p className={`${styles.paragraph} max-w-[470px] mt-5 rtl:font-mitra`}>
                     {lang ? BusinessContent[0].content : BusinessContent[0].contentfa}
                 </p>
                 <Button lang={lang} styles={'mt-10'}/>
 
             </div>
-            <div className={`${layout.sectionImg} flex-col`}>
+            <div className={`${lang? layout.sectionImg : layout.sectionImgfa} flex-col`}>
                 {features.map((feature, index) => (
                     <FeatureCard key={feature.id} {...feature} index={index}/>
                 ))}

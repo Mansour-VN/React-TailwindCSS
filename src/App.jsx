@@ -10,7 +10,7 @@ function App() {
     }
 
     return (
-        <div className="bg-primary w-full overflow-hidden">
+        <div className="bg-primary w-full overflow-hidden" dir={`${lang?"ltr":"rtl"}`}>
             <div className={`${style.paddingX} ${style.flexCenter}`}>
                 <div className={`${style.boxWidth}`}>
                     <Navbar language={changeLanguage} lang={lang}  />

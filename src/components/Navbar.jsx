@@ -11,13 +11,13 @@ function Navbar({language , lang}) {
             <img src={logo} alt="hoobank" className="w-[124px] h-[32px]"/>
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
                 {navLinks.map((nav) => (
-                    <li key={nav.id} className={`font-poppins font-normal cursor-pointer text-[16px] mr-10 text-white`}>
+                    <li key={nav.id} className={`${lang? "font-poppins" : "Arial" } font-normal cursor-pointer text-[16px] mr-10 text-white `}>
                         <a href={`#${nav.id}`}>
                             {lang ? nav.title : nav.titlefa}
                         </a>
                     </li>
                 ))}
-                <li  className={`font-poppins font-normal cursor-pointer text-[16px] mr-0 text-white`}>
+                <li  className={`font-poppins font-normal cursor-pointer text-[16px] mr-0 text-white rtl:mr-10`}>
                     <a onClick={language}>
                         Language
                     </a>
@@ -28,7 +28,7 @@ function Navbar({language , lang}) {
                 <div className={`${toggle? "flex" : "hidden"} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
                     <ul className="list-none flex flex-col flex-1 justify-end items-center flex-1">
                         {navLinks.map((nav) => (
-                            <li key={nav.id} className={`font-poppins font-normal cursor-pointer text-[16px] 'mb-6' text-white`}>
+                            <li key={nav.id} className={`font-poppins font-normal cursor-pointer text-[16px] 'mb-6' text-white rtl:font-Vazir`}>
                                 <a href={`#${nav.id}`}>
                                     {lang ? nav.title : nav.titlefa}
                                 </a>

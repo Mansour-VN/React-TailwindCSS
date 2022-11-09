@@ -281,7 +281,7 @@ export const CardDealContent = [
 export const TestimonialsContent = [
     {
         content: "Everything you need to accept card payments and grow your businessanywhere on the planet.",
-        contentfa: "همه چیزهایی که برای پذیرش پرداخت های کارتی و رشد کسب و کار خود نیاز دارید و در هر نقطه از کره دنیا.",
+        contentfa: "همه چیزهایی که برای پذیرش پرداخت های کارتی و رشد کسب و کار خود نیاز دارید و در هر نقطه از کره زمین.",
     }
 ];
 export const CtaContent = [
@@ -291,7 +291,7 @@ export const CtaContent = [
     },
     {
         content: "Everything you need to accept card payments and grow your business anywhere on the planet.",
-        contentfa: "همه چیزهایی که برای پذیرش پرداخت های کارتی و رشد کسب و کار خود نیاز دارید و در هر نقطه از کره دنیا.",
+        contentfa: "همه چیزهایی که برای پذیرش پرداخت های کارتی و رشد کسب و کار خود نیاز دارید و در هر نقطه از کره زمین.",
     },
 ];
 export const FooterContent = [

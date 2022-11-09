@@ -12,6 +12,9 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        vazir:["Vazir"],
+        nazanin:["Nazanin"],
+        mitra:["Mitra"]
       },
     },
     screens: {
@@ -23,5 +26,5 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-rtl')],
 };

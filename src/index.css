@@ -1,9 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Vazir;
+    src: url("./assets/font/Vazir.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Nazanin;
+    src: url("./assets/font/Far_Nazanin.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Mitra;
+    src: url("./assets/font/Far_MitraBd.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
 :root {
     --black-gradient: linear-gradient(
             144.39deg,

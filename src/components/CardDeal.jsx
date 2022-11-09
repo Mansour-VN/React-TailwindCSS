@@ -10,7 +10,7 @@ function CardDeal({lang}) {
             <div className={layout.sectionInfo}>
                 <h2>Find a better card deal <br className='sm:block hidden'/></h2>
                 in few easy steps.
-                <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+                <p className={`${lang? styles.paragraph : styles.paragraphfa} max-w-[470px] mt-5`}>
                     {lang? CardDealContent[0].content : CardDealContent[0].contentfa}
                 </p>
                 <Button lang={lang} styles='mt-10'/>
